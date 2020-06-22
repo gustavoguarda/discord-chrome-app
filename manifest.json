@@ -1,0 +1,33 @@
+{
+  "name": "Discord",
+  "description": "Web Discord",
+  "version": "0.1",
+  "minimum_chrome_version": "30",
+  "author": [
+    {
+      "name": "Gustavo Guarda",
+      "email": "gustavoguarda@gmail.com"
+    }
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "icons": { "16": "discord-16.png", "128": "discord-128.png" },
+  "permissions": [
+    "webview",
+    "audioCapture",
+    "videoCapture",
+    "storage"
+  ],
+  "webview": {
+    "partitions": [
+      {
+        "name": "discord",
+        "accessible_resources": [""]
+      }
+    ]
+  }
+}
